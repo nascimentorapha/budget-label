@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+
+{% block content %}
+
+<div class="card">
+    
+
+{% if (messages.error) %}
+  {{messages.error}}
+{% endif %}
+
+    <div class="form-login">
+      <h1>Login</h1>
+        <form action="/login" method="POST">
+          <div>
+              <label for="username">Nome</label>
+              <input name="username" id="name" type="text" required ><br />
+          </div>
+          <div>
+            <label for="username">Senha</label>
+            <input name="password" id="password" type="password" required ><br />
+          </div>
+            <button type="submit">Entrar</button>
+            <br>
+            <br>
+      </form>  
+      <a href="/register">Registrar</a>   
+      
+      
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+
+{% block content %}
+
+<div class="card">
+    <div class="form-login">
+        <h1>Registrar</h1>
+        <form action="/register" method="POST">
+            <div>
+                <label for="username">Nome</label>
+                <input name="username" id="name" type="text" required ><br />
+            </div>
+            <div>
+                <label for="password">Senha</label>
+                <input name="password" id="password" type="password" required ><br />
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+        <br>
+        <br>
+        <a href="/login">Login</a>
+      
+      
+    </div>
+</div>
+
+{% endblock %}

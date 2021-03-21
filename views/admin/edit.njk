@@ -1,0 +1,39 @@
+{% extends "layout.njk" %}
+
+
+{% block content %}
+
+
+<form method="POST" action="/admin?_method=PUT">
+
+    <div class="card">
+        <div class="title-admin">
+            <h1>Edição do Produto</h1>
+        </div>
+
+        <div class="item-edit">
+            <h4>Nome do produto</h4>
+            <div >{{ dados.name }}</div>
+            <h4 >Preço</h4>
+            <input 
+                type="number"
+                step="0.01"
+                name="preco"
+                value="{{ dados.preco }}"
+            >
+        </div>
+        <button type="submit" class="form-submit">Salvar</button>
+
+        <input 
+            type="hidden" 
+            name="id" 
+            value={{dados.id}}
+        >
+
+    </div>
+
+    
+
+</form>
+
+{% endblock content %}

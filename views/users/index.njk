@@ -1,0 +1,165 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="card-user">
+    <form class="card" method="POST" action="/users">
+        <div class="content-card">
+            <div class="title-admin">
+                <h1>Cotar preços</h1>
+            </div>
+                
+
+            <div class="item-user">
+                <h2>Nome do cliente</h2>
+                <input type="text" name="name_client" class="name_client">
+            </div>
+
+            <div class="item-user">
+                <h2>Tipo de papel</h2>
+                <select name="tipo_papel">
+                    {% for dado in dados %}
+                        {% if loop.index0 < 5 %}
+                            <option value="{{dado.name}}" name="tipo_papel">{{dado.name}} </option>
+                             {# <input type="hidden" name="tipo_papel_preco" value={{dado.preco}}> #}
+                        {% endif %}
+                        
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="item-user">
+                <h2>Cola</h2>
+                <select name="tipo_cola">
+                    {% for dado in dados %}
+                        {% if loop.index0 > 5 and loop.index0 < 9 %}
+                            <option value="{{dado.name}}" name="tipo_cola">{{dado.name}}</option>
+                            {# <input type="hidden" name="tipo_cola_preco" value={{dado.preco}}> #}
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="item-user">
+                <h2>Cor</h2>
+                <select name="cor">
+                    {% for dado in dados %}
+                        {% if dado.name == "Cor Branca"%}
+                            <option value="{{dado.name}}" name="cor_nome">{{dado.name}}</option>
+                            
+                        {% elif dado.name == "Outros"%}
+                            <option value="{{dado.name}}" name="cor_nome">{{dado.name}}</option>                           
+                        {% endif %}
+                    {% endfor %}  
+                </select>
+            </div>
+
+            <div class="item-user">
+                <h2>Embalagem</h2>
+                <select name="embalagem">
+                    {% for dado in dados %}
+                        {% if loop.index0 > 14 and loop.index0 < 17 %}
+                            <option value="{{dado.name}}" name="embalagem_nome">{{dado.name}}</option>
+                            {# <input type="hidden" name="embalagem_preco" value={{dado.preco}}> #}
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="item-user">
+                <h2>Medidas</h2>
+                <label class="label-alinhar">
+                    <p>Largura</p>
+                    <input type="number" name="largura" id="largura"  step="0.01" placeholder="mm">
+                </label>
+            </div>
+
+            <div class="item-user">
+                <label class="label-alinhar">
+                    <p>Altura</p>
+                    <input type="number" name="altura" id="altura" step="0.01" placeholder="mm">
+                </label>
+            </div>
+            <div class="item-user">
+                <label class="label-alinhar">
+                    <p>Comprimento</p>
+                    <input type="number" name="comprimento" class="qtd_rolo" step="0.01" placeholder="mm">
+                </label>
+            </div>
+            <div class="item-user">
+                <label class="label-alinhar">
+                    <p>Colunas</p>
+                    <input type="number" name="colunas" class="qtd_rolo" step="0.01" placeholder="m">
+                </label>
+            </div>
+            <div class="item-user">
+                <label class="label-alinhar">
+                    <p>Lateral</p>
+                    <input type="number" name="lateral" step="0.01" placeholder="mm">
+                </label>
+            </div>
+            <div class="item-user">
+                <label class="label-alinhar">
+                    <p>Vertical</p>
+                    <input type="number" name="vertical" step="0.01" placeholder="mm">
+                </label>
+            </div>
+            <div class="item-user">
+                <label class="label-alinhar">
+                    <p>Horizontal</p>
+                    <input type="number" name="horizontal" class="qtd_rolo" step="0.01" placeholder="mm">
+                </label>
+            </div>
+
+            <div class="item-user">
+                <h2>Largura</h2>
+                
+            </div>
+            
+            <div class="item-user">
+                <label class="label-alinhar">
+                    <p>Tubete</p>
+                    <select name="tubete">
+                    {% for dado in dados %}
+                        {% if loop.index > 13 and loop.index < 16 %}
+                            <option value="{{dado.name}}" nome="tubete_nome">{{dado.name}}"</option>
+                            {# <input type="hidden" name="tubete_preco" value={{dado.preco}}> #}
+                        {% endif %}
+                    {% endfor %}
+
+                </select>
+                </label>
+            </div>
+
+            <div class="item-user">
+                <h2>Qtd por mês</h2>
+                <input type="number" name="qtd_mes" step="0.01" >
+            </div>
+
+            
+            <label class="label-alinhar">
+                <p>% Perda</p>
+                <input type="number" name="perda" step="0.01">
+            </label>
+            <label class="label-alinhar">
+                <p>Valor m²</p>
+                <input type="number" name="valor_m2" step="0.01">
+            </label>
+            
+
+            
+            <div class="item-user">
+                <h2>MK</h2>
+                <input type="number" name="mk" step="0.01" >
+            </div>
+
+
+        </div>
+        
+        <button type="submit">Salvar</button>
+    </form>
+</div>
+
+
+
+{% endblock %}
