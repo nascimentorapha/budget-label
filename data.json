@@ -1,0 +1,256 @@
+{
+  "dados": [
+    {
+      "id": "1",
+      "name": "Papel Couchê",
+      "preco": "3.25"
+    },
+    {
+      "id": 2,
+      "name": "Papel BOPP (filme)",
+      "preco": 1.3
+    },
+    {
+      "id": "3",
+      "name": "Papel Couchê Térmico (filme)",
+      "preco": "2.00"
+    },
+    {
+      "id": 4,
+      "name": "Papel BOPP Térmico (filme)",
+      "preco": 1.1
+    },
+    {
+      "id": 5,
+      "name": "Outros tipos de papéis",
+      "preco": 1.7
+    },
+    {
+      "id": 6,
+      "name": "Adesivo Borracha",
+      "preco": 0.8
+    },
+    {
+      "id": 7,
+      "name": "Adesivo Acrílico",
+      "preco": 0.6
+    },
+    {
+      "id": 8,
+      "name": "Adesivo Removível",
+      "preco": 1.2
+    },
+    {
+      "id": 9,
+      "name": "Outros tipos de adesivos",
+      "preco": 1.3
+    },
+    {
+      "id": "10",
+      "name": "Com Barreira Protetiva",
+      "preco": "5"
+    },
+    {
+      "id": 11,
+      "name": "Sem Barreira Protetiva",
+      "preco": 0
+    },
+    {
+      "id": "12",
+      "name": "Cor Branca",
+      "preco": "0.27"
+    },
+    {
+      "id": 13,
+      "name": "Outros",
+      "preco": 0.9
+    },
+    {
+      "id": "14",
+      "name": "Tubete 1",
+      "preco": "0.4"
+    },
+    {
+      "id": "15",
+      "name": "Tubete 3",
+      "preco": "0.6"
+    },
+    {
+      "id": "16",
+      "name": "Embalagem Pequena",
+      "preco": "0.37"
+    },
+    {
+      "id": "17",
+      "name": "Embalagem Grande",
+      "preco": "0.37"
+    }
+  ],
+  "cotacao": [
+    {
+      "id": 1,
+      "qtd_rolo": 1509.433962264151,
+      "rolo_tubete_liner": 104,
+      "medida": 8.32,
+      "valor": null,
+      "custo_rolo": 6,
+      "custo_total": 2400,
+      "custo_etiqueta": 0.003975,
+      "custo_titech": 7.5,
+      "valor_negociado": 8.333333333333334,
+      "mkup_total": 0.72,
+      "valor_total": 3333.3333333333335,
+      "name_client": "Nike",
+      "tipo_papel": "Papel Couchê",
+      "tipo_papel_preco": 3.1,
+      "tipo_cola": "Adesivo Acrílico",
+      "tipo_cola_preco": 0.6,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 3.5,
+      "largura": 100,
+      "altura": 50,
+      "comprimento": 80,
+      "colunas": 1,
+      "lateral": 2,
+      "vertical": 0,
+      "horizontal": 3,
+      "tubete_preco": "0.6",
+      "qtd_mes": 400,
+      "perda": 5,
+      "mk": 0.9
+    },
+    {
+      "id": 2,
+      "qtd_rolo": 1000,
+      "rolo_tubete_liner": 106,
+      "medida": 8.267999999999999,
+      "valor": 44.57464829999999,
+      "custo_rolo": 48.64464829999999,
+      "custo_total": 2918.6788979999997,
+      "custo_etiqueta": 0.048644648299999996,
+      "custo_titech": 60.805810374999986,
+      "valor_negociado": 135.1240230555555,
+      "mkup_total": 0.36000000000000004,
+      "valor_total": 8107.441383333331,
+      "name_client": "Nike",
+      "tipo_papel": "Papel Couchê",
+      "tipo_papel_preco": 3.1,
+      "tipo_cola": "Adesivo Acrílico",
+      "tipo_cola_preco": 0.6,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 0.37,
+      "largura": 100,
+      "altura": 75,
+      "comprimento": 78,
+      "colunas": 1,
+      "lateral": 3,
+      "vertical": 0,
+      "horizontal": 3,
+      "tubete_preco": 0.6,
+      "qtd_mes": 60,
+      "perda": 5,
+      "mk": 0.45
+    },
+    {
+      "id": 3,
+      "qtd_rolo": 566.0377358490566,
+      "rolo_tubete_liner": 106,
+      "medida": 3.1799999999999997,
+      "valor": 8.2389825,
+      "custo_rolo": 12.308982499999999,
+      "custo_total": 369.26947499999994,
+      "custo_etiqueta": 0.02174586908333333,
+      "custo_titech": 15.386228124999999,
+      "valor_negociado": 23.67112019230769,
+      "mkup_total": 0.52,
+      "valor_total": 710.1336057692307,
+      "name_client": "Nike",
+      "tipo_papel": "Papel Couchê",
+      "tipo_papel_preco": 3.1,
+      "tipo_cola": "Adesivo Acrílico",
+      "tipo_cola_preco": 0.6,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 0.37,
+      "largura": 100,
+      "altura": 50,
+      "comprimento": 30,
+      "colunas": 1,
+      "lateral": 3,
+      "vertical": 0,
+      "horizontal": 3,
+      "tubete_preco": 0.6,
+      "qtd_mes": 30,
+      "perda": 5,
+      "mk": 0.65
+    },
+    {
+      "id": 4,
+      "qtd_rolo": 4326.923076923076,
+      "rolo_tubete_liner": 304,
+      "medida": 22.8,
+      "valor": 71.64045,
+      "custo_rolo": 75.71045,
+      "custo_total": 11356.5675,
+      "custo_etiqueta": 0.017497526222222223,
+      "custo_titech": 94.63806249999999,
+      "valor_negociado": 105.15340277777776,
+      "mkup_total": 0.7200000000000001,
+      "valor_total": 15773.010416666664,
+      "name_client": "Avon",
+      "tipo_papel": "Papel Couchê",
+      "tipo_papel_preco": 3.1,
+      "tipo_cola": "Adesivo Acrílico",
+      "tipo_cola_preco": 0.6,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 0.37,
+      "largura": 100,
+      "altura": 50,
+      "comprimento": 75,
+      "colunas": 3,
+      "lateral": 1,
+      "vertical": 1,
+      "horizontal": 2,
+      "tubete_preco": 0.6,
+      "qtd_mes": 150,
+      "perda": 5,
+      "mk": 0.9
+    },
+    {
+      "id": 5,
+      "qtd_rolo": 1509.433962264151,
+      "rolo_tubete_liner": 104,
+      "medida": 8.32,
+      "valor": 21.556080000000005,
+      "custo_rolo": 25.62608000000001,
+      "custo_total": 10250.432000000004,
+      "custo_etiqueta": 0.016977278000000005,
+      "custo_titech": 32.03260000000001,
+      "valor_negociado": 44.489722222222234,
+      "mkup_total": 0.5760000000000001,
+      "valor_total": 17795.888888888894,
+      "name_client": "Riachuelo",
+      "tipo_papel": "Papel Couchê",
+      "tipo_papel_preco": 3.1,
+      "tipo_cola": "Adesivo Acrílico",
+      "tipo_cola_preco": 0.6,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 0.37,
+      "largura": 100,
+      "altura": 50,
+      "comprimento": 80,
+      "colunas": 1,
+      "lateral": 2,
+      "vertical": 0,
+      "horizontal": 3,
+      "tubete_preco": 0.6,
+      "qtd_mes": 400,
+      "perda": 5,
+      "mk": 0.72
+    }
+  ]
+}

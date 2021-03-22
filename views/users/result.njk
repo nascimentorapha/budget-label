@@ -1,0 +1,73 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="card-result">
+    <div class="info-result">
+        <h1>Resultados</h1>
+
+        <div class="item-user">
+            <label class="label-alinhar" id="qtd_rolo">
+                <p class="nome_item">Nome do Cliente</p>
+                <p class="info_item">{{cotacao.name_client}}</p>
+            </label>
+
+        </div>
+
+        <div class="item-user">
+            <label class="label-alinhar" id="qtd_rolo">
+                <p class="nome_item">Quantidade por rolo</p>
+                <p class="info_item">{{cotacao.qtd_rolo}}</p>
+            </label>
+        </div>
+
+        <div class="item-user">
+            <label class="label-alinhar">
+                <p class="nome_item">Rolo/Tubete/Liner</p>
+                <p class="info_item">{{cotacao.rolo_tubete_liner}}</p>
+            </label>
+        </div>
+
+        <label class="label-alinhar">
+            <p class="nome_item">Medida(m²)</p>
+            <p class="info_item">{{cotacao.medida}}</p>
+        </label>
+
+        <label class="label-alinhar">
+            <p class="nome_item">Valor</p>
+            <p class="info_item">{{cotacao.valor}}</p>
+        </label>
+
+        <div class="item-user">
+            <h2>Custo por Rolo</h2>
+            <p class="info_item">{{cotacao.custo_rolo}}</p>
+        </div>
+        <div class="item-user">
+            <h2>Custo Total</h2>
+            <p class="info_item">{{cotacao.custo_total}}</p>
+        </div>
+        <div class="item-user">
+            <h2>Custo Etiqueta</h2>
+            <p class="info_item">{{cotacao.custo_etiqueta}}</p>
+        </div>
+        <div class="item-user">
+            <h2>Custo TI Tech</h2>
+            <p class="info_item">{{cotacao.custo_titech}}</p>
+        </div>
+
+        <div class="item-user">
+            <h2>Valor negociado</h2>
+            <p class="info_item">{{cotacao.valor_negociado}}</p>
+        </div>
+        <div class="item-user">
+            <h2>Mkup total negociado</h2>
+            <p class="info_item">{{cotacao.mkup_total}}</p>
+        </div>
+        <div class="item-user">
+            <h2>Valor Total</h2>
+            <p class="info_item">{{cotacao.valor_total}}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
