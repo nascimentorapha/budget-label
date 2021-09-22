@@ -5,26 +5,26 @@
     <div class="card-admin">
         <div class="title-admin">
             <h1>Lista de produtos</h1>
-    </div>
+        </div>
         
-    <table>      
-        <tbody>
-    
-            {% for dado in dados %}
-            <tr>
-                <td>{{dado.name}}</td>
-                <td>R$ {{dado.preco}}</td>
-                <td ><a href="/admin/{{dado.id}}" class="editar-item"><p>Editar</p></a></td>
+        <table>      
+            <tbody>
+        
+                {% for dado in dados %}
+                <tr>
+                    <td>{{dado.name}}</td>
+                    <td>R$ {{dado.preco}}</td>
+                    <td ><a href="/admin/{{dado.id}}" class="editar-item"><p>Editar</p></a></td>
+                    
+                </tr>
+                {% endfor %}
                 
-            </tr>
-            {% endfor %}
-            
 
-        </tbody>
+            </tbody>
 
-    </table>
+        </table>
 
-</div>
+    </div>
 
 
 

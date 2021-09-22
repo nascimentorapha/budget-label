@@ -21,15 +21,12 @@ body{
 header{
     background-color: white;
     width: 100%;
-    padding: 0 32px;
 
 }
 
 .logo_titech {
     margin: auto;
-}
-
-.logo_titech img {
+    background-image: url('logo.jpg');
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -37,6 +34,10 @@ header{
     height: 87px;
     padding: 0px;
     align-self: center;
+}
+
+.logo_titech img {
+    
 }
 
 /* Card principal */
@@ -157,14 +158,10 @@ header{
     margin: 40px 20%;
 }
 
-/* .info-result #qtd_rolo{
-    width: 30%;
-} */
-
 .footer {
     background-color: white;
-    width: 102%;
-    padding: 20px;
+    width: 100%;
+    padding: 20px 0;
     position: relative;
     bottom: 0;
 }

@@ -36,7 +36,7 @@ exports.post = function (req, res){
         tubete_preco,
         qtd_mes,
         unidade,
-        perda,
+        // perda,
         valor_m2,
         mk
     } = req.body
@@ -51,7 +51,8 @@ exports.post = function (req, res){
     custo_titech,
     valor_negociado,
     mkup_total,
-    valor_total = 0
+    valor_total = 0,
+    perda = 5
 
     function SetPrice(){
         for (i in data.dados){
@@ -97,7 +98,7 @@ exports.post = function (req, res){
         vertical_temp,
         horizontal_temp,
         qtd_mes_temp,
-        perda_temp,
+        // perda_temp,
         mk_temp,
         medida_temp,
         tipo_papel_preco_temp,
@@ -123,8 +124,8 @@ exports.post = function (req, res){
         horizontal = horizontal_temp;
         qtd_mes_temp = parseFloat(qtd_mes);
         qtd_mes = qtd_mes_temp;
-        perda_temp = parseFloat(perda);
-        perda = perda_temp;
+        // perda_temp = parseFloat(perda);
+        // perda = perda_temp;
         mk_temp = parseFloat(mk);
         mk = mk_temp;
         medida_temp = parseFloat(medida);
@@ -153,7 +154,7 @@ exports.post = function (req, res){
     qtd_rolo = ( ( ( comprimento/(altura+horizontal) ) * colunas) * 1000 );
     rolo_tubete_liner = (  (largura*colunas)+(lateral*2) + ((vertical*colunas) - vertical));
 
-    medida = ((rolo_tubete_liner/1000) * comprimento);    
+    medida = ((rolo_tubete_liner/1000) * comprimento);
     valor = ( ( ( medida + ((medida*perda)/100)) ) * (valor_m2 + ( (valor_m2 * 5)/100  ))  );
 
     console.log("valor");
@@ -245,7 +246,7 @@ exports.post = function (req, res){
     }
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){ //criação do arquivo
-        if (err) {//tratamento de erro                           //JSON com os dados do login
+        if (err) {//tratamento de erro                                      //JSON com os dados do login
             return res.send("Write file error") 
         }
 
