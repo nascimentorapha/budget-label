@@ -37,8 +37,8 @@ exports.post = function (req, res){
         qtd_mes,
         unidade,
         // perda,
-        valor_m2,
-        mk
+        // valor_m2,
+        // mk
     } = req.body
 
     let qtd_rolo,
@@ -52,7 +52,11 @@ exports.post = function (req, res){
     valor_negociado,
     mkup_total,
     valor_total = 0,
-    perda = 5
+    perda = data.dados[17].preco,
+    mk = data.dados[18].preco,
+    valor_m2 = data.dados[19].preco
+    console.log(perda, mk, valor_m2)
+
 
     function SetPrice(){
         for (i in data.dados){
@@ -84,12 +88,18 @@ exports.post = function (req, res){
             }
         }
 
+        
+
         return true;
     }
 
     SetPrice()
 
+    // ###   Tratamento dos números para transformá-los para float, pois no POST
+    // ###   eles dão erro de NaN (Not a Number), pois no JSON está/edita como string o dado
+
     function AdjustNumbers(){
+        // Define as variáveis
         var largura_temp,
         altura_temp,
         comprimento_temp,
@@ -98,7 +108,7 @@ exports.post = function (req, res){
         vertical_temp,
         horizontal_temp,
         qtd_mes_temp,
-        // perda_temp,
+        perda_temp,
         mk_temp,
         medida_temp,
         tipo_papel_preco_temp,
@@ -108,6 +118,7 @@ exports.post = function (req, res){
         valor_m2_temp,
         tubete_preco_temp = 0;
 
+        // Tratamento das variáveis
         largura_temp = parseFloat(largura);
         largura = largura_temp;
         altura_temp = parseFloat(altura);
@@ -124,8 +135,8 @@ exports.post = function (req, res){
         horizontal = horizontal_temp;
         qtd_mes_temp = parseFloat(qtd_mes);
         qtd_mes = qtd_mes_temp;
-        // perda_temp = parseFloat(perda);
-        // perda = perda_temp;
+        perda_temp = parseFloat(perda);
+        perda = perda_temp;
         mk_temp = parseFloat(mk);
         mk = mk_temp;
         medida_temp = parseFloat(medida);
@@ -156,15 +167,6 @@ exports.post = function (req, res){
 
     medida = ((rolo_tubete_liner/1000) * comprimento);
     valor = ( ( ( medida + ((medida*perda)/100)) ) * (valor_m2 + ( (valor_m2 * 5)/100  ))  );
-
-    console.log("valor");
-    console.log(valor);
-    console.log("tubete_preco");
-    console.log(tubete_preco);
-    console.log("tipo_papel_preco");
-    console.log(tipo_papel_preco);
-    console.log("embalagem_preco");
-    console.log(embalagem_preco);
 
     console.log("custo_rolo antes")
     console.log(custo_rolo)
