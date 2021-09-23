@@ -2,108 +2,138 @@
   "dados": [
     {
       "id": "1",
-      "name": "Papel Couchê",
+      "name": "Couchê",
       "preco": "4",
       "IPI": 5
     },
     {
       "id": 2,
-      "name": "Papel BOPP (filme)",
+      "name": "BOPP Fosco",
       "preco": 1.3,
       "IPI": 15
     },
     {
       "id": "3",
-      "name": "Papel Couchê Térmico (filme)",
+      "name": "Térmico",
       "preco": "2.00",
       "IPI": 5
     },
     {
       "id": 4,
-      "name": "Papel BOPP Térmico (filme)",
+      "name": "Térmico Barreira",
       "preco": 1.1,
-      "IPI": 15
+      "IPI": 5
     },
     {
       "id": 5,
-      "name": "Outros tipos de papéis",
+      "name": "VOID",
       "preco": 1.7,
       "IPI": 5
     },
     {
       "id": 6,
-      "name": "Adesivo Borracha",
+      "name": "Acrílico",
       "preco": 0.8
     },
     {
       "id": 7,
-      "name": "Adesivo Acrílico",
+      "name": "Acrílico ADC200",
       "preco": 0.6
     },
     {
       "id": 8,
-      "name": "Adesivo Removível",
+      "name": "Acrílico S0518",
       "preco": 1.2
     },
     {
       "id": 9,
-      "name": "Outros tipos de adesivos",
+      "name": "Borracha",
       "preco": 1.3
     },
     {
       "id": "10",
-      "name": "Com Barreira Protetiva",
+      "name": "Borracha ADC5240",
       "preco": "5"
     },
     {
       "id": 11,
-      "name": "Sem Barreira Protetiva",
+      "name": "Borracha S0290",
       "preco": 0
     },
     {
-      "id": "12",
+      "id": 12,
+      "name": "Borracha S2045N",
+      "preco": 0
+    },
+    {
+      "id": 13,
+      "name": "Removível ADC710",
+      "preco": 0
+    },
+    {
+      "id": 14,
+      "name": "Removível ADC810",
+      "preco": 0
+    },
+    {
+      "id": 15,
+      "name": "Removível R185",
+      "preco": 0
+    },
+    {
+      "id": "16",
       "name": "Cor Branca",
       "preco": "0.27"
     },
     {
-      "id": 13,
+      "id": 17,
       "name": "Outros",
       "preco": 0.9
     },
     {
-      "id": "14",
+      "id": "18",
       "name": "Tubete 1",
       "preco": "0.3"
     },
     {
-      "id": "15",
+      "id": "19",
       "name": "Tubete 3",
       "preco": "1"
     },
     {
-      "id": "16",
+      "id": "20",
       "name": "Embalagem Pequena",
       "preco": "0.6"
     },
     {
-      "id": "17",
+      "id": "21",
       "name": "Embalagem Grande",
       "preco": "1"
     },
     {
-      "id": "18",
+      "id": "22",
       "name": "Perda",
       "preco": "5"
     },
     {
-      "id": "19",
+      "id": "23",
       "name": "MK",
       "preco": "0.6"
     },
     {
-      "id": "20",
+      "id": "24",
       "name": "Valor m²",
-      "preco": "3.91"
+      "preco": "2.51"
+    },
+    {
+      "id": "25",
+      "name": "Valor da fita",
+      "preco": "0.1"
+    },
+    {
+      "id": "26",
+      "name": "Mão de Obra",
+      "preco": "2"
     }
   ],
   "cotacao": [
@@ -569,6 +599,142 @@
       "perda": 5,
       "IPI": 15,
       "mk": 0.6
+    },
+    {
+      "id": 15,
+      "qtd_rolo": 807.8036884621247,
+      "rolo_tubete_liner": 110,
+      "medida": 5.83,
+      "valor": 27.525324750000003,
+      "custo_rolo": "27.8253247500000040.112",
+      "custo_total": null,
+      "custo_etiqueta": null,
+      "custo_titech": null,
+      "valor_negociado": null,
+      "mkup_total": null,
+      "valor_total": null,
+      "name_client": "23/09 13:44",
+      "tipo_papel": "Papel BOPP (filme)",
+      "tipo_papel_preco": 1.3,
+      "tipo_cola": "Adesivo Acrílico",
+      "tipo_cola_preco": 0.6,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 1,
+      "largura": 107,
+      "altura": 63,
+      "comprimento": 53,
+      "colunas": 1,
+      "lateral": 1.5,
+      "vertical": 0,
+      "horizontal": 2.61,
+      "tubete_preco": 0.3,
+      "qtd_mes": 50,
+      "perda": 5,
+      "IPI": 15,
+      "mk": 0.6
+    },
+    {
+      "id": 16,
+      "qtd_rolo": 807.8036884621247,
+      "rolo_tubete_liner": 110,
+      "medida": 5.83,
+      "valor": 27.525324750000003,
+      "custo_rolo": 30.925324750000005,
+      "custo_total": 1546.2662375000002,
+      "custo_etiqueta": 0.03828321805372642,
+      "custo_titech": 38.656655937500005,
+      "valor_negociado": 64.42775989583335,
+      "mkup_total": 0.48,
+      "valor_total": 3221.3879947916676,
+      "name_client": "23/09 13:44",
+      "tipo_papel": "Papel BOPP (filme)",
+      "tipo_papel_preco": 1.3,
+      "tipo_cola": "Adesivo Acrílico",
+      "tipo_cola_preco": 0.6,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 1,
+      "largura": 107,
+      "altura": 63,
+      "comprimento": 53,
+      "colunas": 1,
+      "lateral": 1.5,
+      "vertical": 0,
+      "horizontal": 2.61,
+      "tubete_preco": 0.3,
+      "qtd_mes": 50,
+      "perda": 5,
+      "IPI": 15,
+      "mk": 0.6
+    },
+    {
+      "id": 17,
+      "qtd_rolo": 807.8036884621247,
+      "rolo_tubete_liner": 110,
+      "medida": 5.83,
+      "valor": 3.6839187,
+      "custo_rolo": 10.5839187,
+      "custo_total": 635.035122,
+      "custo_etiqueta": 0.013102092564283019,
+      "custo_titech": 13.229898375,
+      "valor_negociado": 13.229898375,
+      "mkup_total": 0.8,
+      "valor_total": 793.7939025,
+      "name_client": "23/09 15:22",
+      "tipo_papel": "Couchê",
+      "tipo_papel_preco": 4,
+      "tipo_cola": "Borracha",
+      "tipo_cola_preco": 1.3,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 0.6,
+      "largura": 107,
+      "altura": 63,
+      "comprimento": 53,
+      "colunas": 1,
+      "lateral": 1.5,
+      "vertical": 0,
+      "horizontal": 2.61,
+      "tubete_preco": 0.3,
+      "qtd_mes": 60,
+      "perda": 0.3,
+      "IPI": 5,
+      "mk": 1
+    },
+    {
+      "id": 18,
+      "qtd_rolo": 248.36601307189542,
+      "rolo_tubete_liner": 106,
+      "medida": 4.028,
+      "valor": 2.54525292,
+      "custo_rolo": 9.44525292,
+      "custo_total": 566.7151752,
+      "custo_etiqueta": 0.03802957096736842,
+      "custo_titech": 11.806566149999998,
+      "valor_negociado": 11.806566149999998,
+      "mkup_total": 0.8,
+      "valor_total": 708.3939689999999,
+      "name_client": "23/09 15:28",
+      "tipo_papel": "Couchê",
+      "tipo_papel_preco": 4,
+      "tipo_cola": "Borracha",
+      "tipo_cola_preco": 1.3,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 0.6,
+      "largura": 100,
+      "altura": 150,
+      "comprimento": 38,
+      "colunas": 1,
+      "lateral": 3,
+      "vertical": 0,
+      "horizontal": 3,
+      "tubete_preco": 0.3,
+      "qtd_mes": 60,
+      "perda": 0.3,
+      "IPI": 5,
+      "mk": 1
     }
   ]
 }
