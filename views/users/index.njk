@@ -21,7 +21,6 @@
                     {% for dado in dados %}
                         {% if loop.index0 < 5 %}
                             <option value="{{dado.name}}" name="tipo_papel">{{dado.name}} </option>
-                             {# <input type="hidden" name="tipo_papel_preco" value={{dado.preco}}> #}
                         {% endif %}
                         
                     {% endfor %}
@@ -32,7 +31,7 @@
                 <h2>Cola</h2>
                 <select name="tipo_cola">
                     {% for dado in dados %}
-                        {% if loop.index0 > 5 and loop.index0 < 9 %}
+                        {% if loop.index0 > 4 and loop.index0 < 15 %}
                             <option value="{{dado.name}}" name="tipo_cola">{{dado.name}}</option>
                             {# <input type="hidden" name="tipo_cola_preco" value={{dado.preco}}> #}
                         {% endif %}
@@ -58,9 +57,8 @@
                 <h2>Embalagem</h2>
                 <select name="embalagem">
                     {% for dado in dados %}
-                        {% if loop.index0 > 14 and loop.index0 < 17 %}
+                        {% if loop.index0 > 18 and loop.index0 < 21 %}
                             <option value="{{dado.name}}" name="embalagem_nome">{{dado.name}}</option>
-                            {# <input type="hidden" name="embalagem_preco" value={{dado.preco}}> #}
                         {% endif %}
                     {% endfor %}
                 </select>
@@ -93,6 +91,7 @@
                 </label>
             </div>
             <div class="item-user">
+                <h2>Espaçamento entre as etiquetas</h2>
                 <label class="label-alinhar">
                     <p>Lateral</p>
                     <input type="number" name="lateral" step="0.01" placeholder="mm">
@@ -112,8 +111,7 @@
             </div>
 
             <div class="item-user">
-                <h2>Largura</h2>
-                
+                <h2>Tubete</h2>
             </div>
             
             <div class="item-user">
@@ -121,9 +119,8 @@
                     <p>Tubete</p>
                     <select name="tubete">
                     {% for dado in dados %}
-                        {% if loop.index > 13 and loop.index < 16 %}
+                        {% if loop.index > 17 and loop.index < 20 %}
                             <option value="{{dado.name}}" nome="tubete_nome">{{dado.name}}"</option>
-                            {# <input type="hidden" name="tubete_preco" value={{dado.preco}}> #}
                         {% endif %}
                     {% endfor %}
 
