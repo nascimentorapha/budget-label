@@ -57,7 +57,7 @@ exports.post = function (req, res){
     valor_m2 = data.dados[19].preco
     console.log(perda, mk, valor_m2)
 
-
+ //teste
     function SetPrice(){
         for (i in data.dados){
             if (tipo_papel == data.dados[i].name ){
