@@ -52,13 +52,15 @@ exports.post = function (req, res){
     valor_total = 0,
     perda = data.dados[17].preco,
     mk = data.dados[18].preco,
-    valor_m2 = data.dados[19].preco
+    valor_m2 = data.dados[19].preco,
+    valor_fita = data.dados[20].preco,
+    mao_obra = data.dados[21].preco
 
- //teste
+
     function SetPrice(){
         for (i in data.dados){
             if (tipo_papel == data.dados[i].name ){
-                tipo_papel_preco = data.dados[i].preco
+                tipo_papel_preco = data.dados[i].preco // 23/09/21 13:50 - Não usa essa variável nos cálculos
                 IPI = data.dados[i].IPI
             }
         }
@@ -86,8 +88,6 @@ exports.post = function (req, res){
             }
         }
 
-        
-
         return true;
     }
 
@@ -114,7 +114,9 @@ exports.post = function (req, res){
         cor_preco_temp,
         embalagem_preco_temp,
         valor_m2_temp,
-        tubete_preco_temp = 0;
+        tubete_preco_temp,
+        valor_fita_temp,
+        mao_obra_temp = 0;
 
         // Tratamento das variáveis
         largura_temp = parseFloat(largura);
@@ -151,7 +153,10 @@ exports.post = function (req, res){
         embalagem_preco = embalagem_preco_temp;
         tubete_preco_temp = parseFloat(tubete_preco);
         tubete_preco = tubete_preco_temp;
-
+        valor_fita_temp = parseFloat(valor_fita);
+        valor_fita = valor_fita_temp;
+        mao_obra_temp = parseFloat(mao_obra);
+        mao_obra = mao_obra_temp;
     }
 
     AdjustNumbers();
@@ -166,10 +171,14 @@ exports.post = function (req, res){
     medida = ((rolo_tubete_liner/1000) * comprimento);
     valor = ( ( ( medida + ((medida*perda)/100)) ) * (valor_m2 + ( (valor_m2 * IPI)/100 ))  );
 
-    console.log ("Valor de teste: ", valor)
-    custo_rolo = valor + tubete_preco + tipo_papel_preco + embalagem_preco + 0,05 + 1;
+    console.log ("Valor de teste: ", valor);
+    console.log ("Valor da fita: ", valor_fita);
+    console.log ("Valor do tubete: ", tubete_preco);
+    console.log ("Valor da Mao de Obra: ", mao_obra);
+
+    custo_rolo = valor + tubete_preco + valor_fita + embalagem_preco + mao_obra;
     
-    console.log("Custo do rolo: ", custo_rolo)
+    console.log("Custo do rolo: ", custo_rolo);
     custo_total = custo_rolo * qtd_mes;
     custo_etiqueta = custo_rolo / qtd_rolo;
     custo_titech = custo_rolo / 0.8;
