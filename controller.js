@@ -35,10 +35,7 @@ exports.post = function (req, res){
         tubete_nome,
         tubete_preco,
         qtd_mes,
-        unidade,
-        // perda,
-        // valor_m2,
-        // mk
+        unidade
     } = req.body
 
     let qtd_rolo,
@@ -51,17 +48,18 @@ exports.post = function (req, res){
     custo_titech,
     valor_negociado,
     mkup_total,
+    IPI,
     valor_total = 0,
     perda = data.dados[17].preco,
     mk = data.dados[18].preco,
     valor_m2 = data.dados[19].preco
-    console.log(perda, mk, valor_m2)
 
  //teste
     function SetPrice(){
         for (i in data.dados){
             if (tipo_papel == data.dados[i].name ){
                 tipo_papel_preco = data.dados[i].preco
+                IPI = data.dados[i].IPI
             }
         }
         for (i in data.dados){
@@ -166,13 +164,12 @@ exports.post = function (req, res){
     rolo_tubete_liner = (  (largura*colunas)+(lateral*2) + ((vertical*colunas) - vertical));
 
     medida = ((rolo_tubete_liner/1000) * comprimento);
-    valor = ( ( ( medida + ((medida*perda)/100)) ) * (valor_m2 + ( (valor_m2 * 5)/100  ))  );
+    valor = ( ( ( medida + ((medida*perda)/100)) ) * (valor_m2 + ( (valor_m2 * IPI)/100 ))  );
 
-    console.log("custo_rolo antes")
-    console.log(custo_rolo)
+    console.log ("Valor de teste: ", valor)
     custo_rolo = valor + tubete_preco + tipo_papel_preco + embalagem_preco + 0,05 + 1;
-    console.log("custo_rolo depois")
-    console.log(custo_rolo)
+    
+    console.log("Custo do rolo: ", custo_rolo)
     custo_total = custo_rolo * qtd_mes;
     custo_etiqueta = custo_rolo / qtd_rolo;
     custo_titech = custo_rolo / 0.8;
@@ -215,6 +212,7 @@ exports.post = function (req, res){
         qtd_mes,
         unidade,
         perda,
+        IPI,
         mk
     })
 
@@ -244,6 +242,7 @@ exports.post = function (req, res){
         qtd_mes,
         unidade,
         perda,
+        IPI,
         mk
     }
 
