@@ -3,27 +3,32 @@
     {
       "id": "1",
       "name": "Papel Couchê",
-      "preco": "4"
+      "preco": "4",
+      "IPI": 5
     },
     {
       "id": 2,
       "name": "Papel BOPP (filme)",
-      "preco": 1.3
+      "preco": 1.3,
+      "IPI": 15
     },
     {
       "id": "3",
       "name": "Papel Couchê Térmico (filme)",
-      "preco": "2.00"
+      "preco": "2.00",
+      "IPI": 5
     },
     {
       "id": 4,
       "name": "Papel BOPP Térmico (filme)",
-      "preco": 1.1
+      "preco": 1.1,
+      "IPI": 15
     },
     {
       "id": 5,
       "name": "Outros tipos de papéis",
-      "preco": 1.7
+      "preco": 1.7,
+      "IPI": 5
     },
     {
       "id": 6,
@@ -68,22 +73,22 @@
     {
       "id": "14",
       "name": "Tubete 1",
-      "preco": "0.4"
+      "preco": "0.3"
     },
     {
       "id": "15",
       "name": "Tubete 3",
-      "preco": "0.6"
+      "preco": "1"
     },
     {
       "id": "16",
       "name": "Embalagem Pequena",
-      "preco": "0.37"
+      "preco": "0.6"
     },
     {
       "id": "17",
       "name": "Embalagem Grande",
-      "preco": "0.37"
+      "preco": "1"
     },
     {
       "id": "18",
@@ -98,7 +103,7 @@
     {
       "id": "20",
       "name": "Valor m²",
-      "preco": "2.51"
+      "preco": "3.91"
     }
   ],
   "cotacao": [
@@ -529,6 +534,40 @@
       "tubete_preco": 0.4,
       "qtd_mes": 1,
       "perda": 5,
+      "mk": 0.6
+    },
+    {
+      "id": 14,
+      "qtd_rolo": 807.8036884621247,
+      "rolo_tubete_liner": 110,
+      "medida": 5.83,
+      "valor": 27.525324750000003,
+      "custo_rolo": 29.595324750000003,
+      "custo_total": 23913.022398,
+      "custo_etiqueta": 0.03663677843108491,
+      "custo_titech": 36.994155937500004,
+      "valor_negociado": 61.65692656250001,
+      "mkup_total": 0.48,
+      "valor_total": 49818.79666250001,
+      "name_client": "23/09 10:48",
+      "tipo_papel": "Papel BOPP (filme)",
+      "tipo_papel_preco": 1.3,
+      "tipo_cola": "Adesivo Acrílico",
+      "tipo_cola_preco": 0.6,
+      "cor": "Cor Branca",
+      "cor_preco": 0.27,
+      "embalagem_preco": 0.37,
+      "largura": 107,
+      "altura": 63,
+      "comprimento": 53,
+      "colunas": 1,
+      "lateral": 1.5,
+      "vertical": 0,
+      "horizontal": 2.61,
+      "tubete_preco": 0.4,
+      "qtd_mes": 808,
+      "perda": 5,
+      "IPI": 15,
       "mk": 0.6
     }
   ]
