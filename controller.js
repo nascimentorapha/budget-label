@@ -50,11 +50,11 @@ exports.post = function (req, res){
     mkup_total,
     IPI,
     valor_total = 0,
-    perda = data.dados[17].preco,
-    mk = data.dados[18].preco,
-    valor_m2 = data.dados[19].preco,
-    valor_fita = data.dados[20].preco,
-    mao_obra = data.dados[21].preco
+    perda = data.dados[21].preco,
+    mk = data.dados[22].preco,
+    valor_m2 = data.dados[23].preco,
+    valor_fita = data.dados[24].preco,
+    mao_obra = data.dados[25].preco
 
 
     function SetPrice(){
@@ -169,13 +169,23 @@ exports.post = function (req, res){
     rolo_tubete_liner = (  (largura*colunas)+(lateral*2) + ((vertical*colunas) - vertical));
 
     medida = ((rolo_tubete_liner/1000) * comprimento);
-    valor = ( ( ( medida + ((medida*perda)/100)) ) * (valor_m2 + ( (valor_m2 * IPI)/100 ))  );
+    // var medida_temp = parseFloat(medida).toFixed(2);
+    // medida = medida_temp;
+    console.log("medida = ", medida);
+    console.log("perda = ", perda, " | perda dividida = ", perda/100);
+    console.log("valor do m2 = ", valor_m2);
+    console.log("IPI = ", IPI, " | IPI DIVIDIDO = ", IPI/100);
+    valor = ( ( ( medida + (medida * (perda/100) ) ) ) * (valor_m2 + ( valor_m2 * (IPI/100) ))  );
+    // var valor_temp = parseFloat(valor).toFixed(2);
+    // valor = valor_temp;
 
-    console.log ("Valor de teste: ", valor);
-    console.log ("Valor da fita: ", valor_fita);
-    console.log ("Valor do tubete: ", tubete_preco);
-    console.log ("Valor da Mao de Obra: ", mao_obra);
-
+    console.log("\napos os calculos: \n")
+    
+    console.log("medida = ", medida);
+    console.log("perda = ", perda);
+    console.log("valor do m2 = ", valor_m2);
+    console.log("IPI = ", IPI);
+    console.log("Valor = ", valor);
     custo_rolo = valor + tubete_preco + valor_fita + embalagem_preco + mao_obra;
     
     console.log("Custo do rolo: ", custo_rolo);
