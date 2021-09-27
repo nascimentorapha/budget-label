@@ -169,15 +169,11 @@ exports.post = function (req, res){
     rolo_tubete_liner = (  (largura*colunas)+(lateral*2) + ((vertical*colunas) - vertical));
 
     medida = ((rolo_tubete_liner/1000) * comprimento);
-    // var medida_temp = parseFloat(medida).toFixed(2);
-    // medida = medida_temp;
     console.log("medida = ", medida);
     console.log("perda = ", perda, " | perda dividida = ", perda/100);
     console.log("valor do m2 = ", valor_m2);
     console.log("IPI = ", IPI, " | IPI DIVIDIDO = ", IPI/100);
-    valor = ( ( ( medida + (medida * (perda/100) ) ) ) * (valor_m2 + ( valor_m2 * (IPI/100) ))  );
-    // var valor_temp = parseFloat(valor).toFixed(2);
-    // valor = valor_temp;
+    valor = ( ( ( medida + (medida * (perda/100) ) ) ) * (valor_m2 + ( valor_m2 * (IPI/100) ))  ).toFixed(2);
 
     console.log("\napos os calculos: \n")
     
@@ -195,6 +191,78 @@ exports.post = function (req, res){
     valor_negociado = custo_titech / mk;
     mkup_total = custo_rolo / valor_negociado;
     valor_total = valor_negociado * qtd_mes;
+
+    // ###  Função para converter para 2 casas decimais os floats  ### //
+
+    function ToRound(num) {
+        var m = Number((Math.abs(num) * 100).toPrecision(15));
+        return Math.round(m) / 100 * Math.sign(num);
+    }
+
+    const cotacao = {
+        id,
+        qtd_rolo,
+        rolo_tubete_liner,
+        medida,
+        valor,
+        custo_rolo,
+        custo_total,
+        custo_etiqueta,
+        custo_titech,
+        valor_negociado,
+        mkup_total,
+        valor_total,
+        name_client, 
+        tipo_papel, 
+        tipo_papel_preco, 
+        tipo_cola, 
+        tipo_cola_preco,
+        cor, 
+        cor_nome,
+        cor_preco,
+        embalagem_nome,
+        embalagem_preco,
+        largura,
+        altura,
+        comprimento,
+        colunas,
+        lateral,
+        vertical,
+        horizontal,
+        tubete_nome,
+        tubete_preco,
+        qtd_mes,
+        unidade,
+        perda,
+        IPI,
+        mk
+    }
+
+    function CheckNumbers(){
+        console.log("Teste 1:\n")
+        for (var key in cotacao){
+            console.log(cotacao[key])
+        }
+
+        console.log("\nTeste 2:\n")
+        var keys = Object.keys(cotacao);
+        console.log(keys)
+
+
+        // var keys = Object.keys(data.cotacao[id]);
+
+        // data.cotacao[i].keys
+        
+        // for (i in data.cotacao[id]) {
+        //     if (Number.isInteger(data.cotacao.key) == true){
+        //         console.log("Iteração %d = ", data.cotacao.key)
+        //     }
+        //     else
+        //         console.log("Iteração %d", i, " não é inteiro")
+        // }
+    }
+
+    CheckNumbers()
 
     data.cotacao.push({
         id,
@@ -234,36 +302,6 @@ exports.post = function (req, res){
         IPI,
         mk
     })
-
-    const cotacao = {
-        valor,
-        qtd_rolo,
-        id,
-        name_client, 
-        tipo_papel, 
-        tipo_papel_preco, 
-        tipo_cola, 
-        tipo_cola_preco,
-        cor, 
-        cor_nome,
-        cor_preco,
-        embalagem_nome,
-        embalagem_preco,
-        largura,
-        altura,
-        comprimento,
-        colunas,
-        lateral,
-        vertical,
-        horizontal,
-        tubete_nome,
-        tubete_preco,
-        qtd_mes,
-        unidade,
-        perda,
-        IPI,
-        mk
-    }
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){ //criação do arquivo
         if (err) {//tratamento de erro                                      //JSON com os dados do login
