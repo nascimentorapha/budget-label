@@ -163,24 +163,9 @@ exports.post = function (req, res){
 
     qtd_rolo = ( ( ( comprimento/(altura+horizontal) ) * colunas) * 1000 );
     rolo_tubete_liner = (  (largura*colunas)+(lateral*2) + ((vertical*colunas) - vertical));
-
     medida = ((rolo_tubete_liner/1000) * comprimento);
-    console.log("medida = ", medida);
-    console.log("perda = ", perda, " | perda dividida = ", perda/100);
-    console.log("valor do m2 = ", valor_m2);
-    console.log("IPI = ", IPI, " | IPI DIVIDIDO = ", IPI/100);
     valor = ( ( ( medida + (medida * (perda/100) ) ) ) * (valor_m2 + ( valor_m2 * (IPI/100) ))  );
-
-    console.log("\napos os calculos: \n")
-    
-    console.log("medida = ", medida);
-    console.log("perda = ", perda);
-    console.log("valor do m2 = ", valor_m2);
-    console.log("IPI = ", IPI);
-    console.log("Valor = ", valor);
     custo_rolo = valor + tubete_preco + valor_fita + embalagem_preco + mao_obra;
-    
-    console.log("Custo do rolo: ", custo_rolo);
     custo_total = custo_rolo * qtd_mes;
     custo_etiqueta = custo_rolo / qtd_rolo;
     custo_titech = custo_rolo / 0.8;
@@ -188,75 +173,38 @@ exports.post = function (req, res){
     mkup_total = custo_rolo / valor_negociado;
     valor_total = valor_negociado * qtd_mes;
 
+
+
     // ###  Função para converter para 2 casas decimais os floats  ### //
 
-    function ToRound(num) {
-        var m = Number((Math.abs(num) * 100).toPrecision(15));
-        return Math.round(m) / 100 * Math.sign(num);
+    function Round() {
+        var valor_temp,
+        custo_rolo_temp,
+        custo_total_temp,
+        custo_etiqueta_temp,
+        custo_titech_temp,
+        valor_negociado_temp,
+        valor_total_temp = 0;
+
+        valor_temp = Math.round(valor * 100) / 100;
+        valor = valor_temp;
+        custo_rolo_temp = Math.round(custo_rolo * 100) / 100;
+        custo_rolo = custo_rolo_temp;
+        custo_total_temp = Math.round(custo_total * 100) / 100;
+        custo_total = custo_total_temp;
+        custo_etiqueta_temp = Math.round(custo_etiqueta * 100) / 100;
+        custo_etiqueta = custo_etiqueta_temp;
+        custo_titech_temp = Math.round(custo_titech * 100) / 100;
+        custo_titech = custo_titech_temp;
+        valor_negociado_temp = Math.round(valor_negociado * 100) / 100;
+        valor_negociado = valor_negociado_temp;
+        valor_total_temp = Math.round(valor_total * 100) / 100;
+        valor_total = valor_total_temp;
     }
 
-    const cotacao = {
-        id,
-        qtd_rolo,
-        rolo_tubete_liner,
-        medida,
-        valor,
-        custo_rolo,
-        custo_total,
-        custo_etiqueta,
-        custo_titech,
-        valor_negociado,
-        mkup_total,
-        valor_total,
-        name_client, 
-        tipo_papel, 
-        tipo_papel_preco, 
-        tipo_cola, 
-        tipo_cola_preco,
-        cor, 
-        cor_preco,
-        embalagem,
-        embalagem_preco,
-        largura,
-        altura,
-        comprimento,
-        colunas,
-        lateral,
-        vertical,
-        horizontal,
-        tubete,
-        tubete_preco,
-        qtd_mes,
-        perda,
-        IPI,
-        mk
-    }
+    Round();  
 
-    function CheckNumbers(){
-        console.log("Teste 1:\n")
-        for (var key in cotacao){
-            console.log(cotacao[key])
-        }
-
-        // console.log("\nTeste 2:\n")
-        // var keys = Object.keys(cotacao);
-        // console.log(keys)
-
-
-        // var keys = Object.keys(data.cotacao[id]);
-
-        // data.cotacao[i].keys
-        
-        // for (i in data.cotacao[id]) {
-        //     if (Number.isInteger(data.cotacao.key) == true){
-        //         console.log("Iteração %d = ", data.cotacao.key)
-        //     }
-        //     else
-        //         console.log("Iteração %d", i, " não é inteiro")
-        // }
-    }
-
-    CheckNumbers()
+    // ###  Função para inserir no array "data.cotacao" os valores  ### //
 
     data.cotacao.push({
         id,
