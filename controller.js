@@ -19,10 +19,8 @@ exports.post = function (req, res){
         tipo_cola, 
         tipo_cola_preco,
         cor, 
-        cor_nome,
         cor_preco,
         embalagem,
-        embalagem_nome,
         embalagem_preco,
         largura,
         altura,
@@ -32,10 +30,8 @@ exports.post = function (req, res){
         vertical,
         horizontal,
         tubete,
-        tubete_nome,
         tubete_preco,
-        qtd_mes,
-        unidade
+        qtd_mes
     } = req.body
 
     let qtd_rolo,
@@ -173,7 +169,7 @@ exports.post = function (req, res){
     console.log("perda = ", perda, " | perda dividida = ", perda/100);
     console.log("valor do m2 = ", valor_m2);
     console.log("IPI = ", IPI, " | IPI DIVIDIDO = ", IPI/100);
-    valor = ( ( ( medida + (medida * (perda/100) ) ) ) * (valor_m2 + ( valor_m2 * (IPI/100) ))  ).toFixed(2);
+    valor = ( ( ( medida + (medida * (perda/100) ) ) ) * (valor_m2 + ( valor_m2 * (IPI/100) ))  );
 
     console.log("\napos os calculos: \n")
     
@@ -218,9 +214,8 @@ exports.post = function (req, res){
         tipo_cola, 
         tipo_cola_preco,
         cor, 
-        cor_nome,
         cor_preco,
-        embalagem_nome,
+        embalagem,
         embalagem_preco,
         largura,
         altura,
@@ -229,10 +224,9 @@ exports.post = function (req, res){
         lateral,
         vertical,
         horizontal,
-        tubete_nome,
+        tubete,
         tubete_preco,
         qtd_mes,
-        unidade,
         perda,
         IPI,
         mk
@@ -244,9 +238,9 @@ exports.post = function (req, res){
             console.log(cotacao[key])
         }
 
-        console.log("\nTeste 2:\n")
-        var keys = Object.keys(cotacao);
-        console.log(keys)
+        // console.log("\nTeste 2:\n")
+        // var keys = Object.keys(cotacao);
+        // console.log(keys)
 
 
         // var keys = Object.keys(data.cotacao[id]);
@@ -283,9 +277,7 @@ exports.post = function (req, res){
         tipo_cola, 
         tipo_cola_preco,
         cor, 
-        cor_nome,
         cor_preco,
-        embalagem_nome,
         embalagem_preco,
         largura,
         altura,
@@ -294,10 +286,9 @@ exports.post = function (req, res){
         lateral,
         vertical,
         horizontal,
-        tubete_nome,
+        tubete,
         tubete_preco,
         qtd_mes,
-        unidade,
         perda,
         IPI,
         mk
