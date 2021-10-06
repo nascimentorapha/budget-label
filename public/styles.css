@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rasa:wght@400;700&display=swap');
 
+@media screen {
 * {
     margin: 0;
     border: none;
@@ -34,10 +35,6 @@ header{
     height: 87px;
     padding: 0px;
     align-self: center;
-}
-
-.logo_titech img {
-    
 }
 
 /* Card principal */
@@ -169,4 +166,30 @@ header{
 .footer p {
     text-align: center;
     font-size: 18px;
+}
+}
+
+
+@media print {
+    * {
+        background:transparent;
+        color:#000 !important;
+        text-shadow:none !important;
+        filter:none !important;
+        -ms-filter:none !important;
+    }
+        
+    body {
+        margin:0;
+        padding:0;
+        line-height: 1.4em;
+        background-color: #8d0101;
+    }
+    img {
+        max-width: 100%;
+    }
+
+    .card-result{
+        background-color:#8d0101;
+    }
 }
