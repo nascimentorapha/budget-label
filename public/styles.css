@@ -7,7 +7,6 @@
 }
 
 body{
-    margin: 0;
     background-image: url('background.jpg');
     background-color: #e0e0e0;
     height: 100%;
@@ -172,24 +171,167 @@ header{
 
 @media print {
     * {
-        background:transparent;
-        color:#000 !important;
-        text-shadow:none !important;
-        filter:none !important;
-        -ms-filter:none !important;
+        margin: 0;
+        border: none;
     }
+    body{
+        /* background-image: url('background.jpg'); */
+        background-color: #e0e0e0;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        font-family: 'Rasa', sans-serif;
+    }
+    
+    header{
+        background-color: white;
+        width: 100%;
+    
+    }
+    
+    .logo_titech {
+        margin: auto;
+        background-image: url('logo.jpg');
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 197px;
+        height: 87px;
+        padding: 0px;
+        align-self: center;
+    }
+    
+    /* Card principal */
+    
+    .card {
+        background-color:#F7F7F7;
+        width: 300px;
+        height: 410px;
+    
+        margin: 45px auto;
         
-    body {
-        margin:0;
-        padding:0;
-        line-height: 1.4em;
-        background-color: #8d0101;
     }
-    img {
-        max-width: 100%;
+    
+    .form-login {
+        width: 150px;
+        margin: 40px auto;
+        padding-top: 48px;
     }
-
-    .card-result{
-        background-color:#8d0101;
+    
+    .form-login h1{
+        text-align: center;
+        padding-bottom: 24px;
+    }
+    
+    
+    .card-admin{
+        background-color:#F7F7F7;
+        width: 700px;
+        height: 1150px;
+        margin: 45px auto;
+        position: relative;
+    }
+    
+    .title-admin h1{
+        text-align: center;
+        padding: 24px 0;
+    }
+    
+    
+    .card-admin table {
+        margin-top: 32px;
+        padding: 0 64px;
+        width: 100%;
+    }
+    
+    .card-admin table td {
+        border-bottom: 1px solid rgb(115, 115, 207);
+        padding: 8px 0;
+        font-size: 16px;
+    }
+    
+    .novo-preco-admin input {
+        width: 40px;
+        height: 24px;
+        margin-left: 8px;
+        border-radius: 4px;
+        position: absolute;
+        right: 72px;
+        margin-bottom: 8px;
+    }
+    
+    
+    .card-user {
+        background-color:#F7F7F7;
+        width: 700px;
+        height: 1650px;
+    
+        margin: 45px auto;
+    }
+    
+    .name_client {
+        width: 70%;
+    }
+    
+    .card-user input, select{
+        height: 20px;
+        border: solid 1px #383838;
+    }
+    
+    .content-card {
+        width: 70%;
+        margin: 10px auto;
+    }
+    
+    .label-alinhar{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 60%;
+    }
+    
+    .item-user{
+        padding-top: 16px;
+    }
+    
+    .card-result {
+        background-color:#F7F7F7;
+        width: 700px;
+        height: 1000px;
+        margin: 45px auto;
+        position: relative;
+    }
+    
+    .card-result input, select{
+        border: solid 1px #383838;
+    }
+    
+    .card-result .label-alinhar{
+        padding-top: 8px;
+        display: inline-block;
+    }
+    
+    .nome_item {
+        font-weight: bold;
+    }
+    
+    .info-result{
+        position: absolute;
+        margin: 40px 20%;
+    }
+    
+    .footer {
+        background-color: white;
+        width: 100%;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+    }
+    
+    .footer p {
+        text-align: center;
+        font-size: 18px;
     }
 }
